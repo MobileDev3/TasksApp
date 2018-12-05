@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="20dp"
+    tools:showIn="@layout/activity_main">
+	<LinearLayout
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:orientation="vertical"
+		
+		>
+		<TextView
+		android:text="Please enter your credentials"
+		android:layout_width="match_parent"
+		android:textSize="24sp"
+		android:textColor="#578EF7"
+		android:padding="15dp"
+		android:gravity="center"
+		android:layout_height="wrap_content"
+		android:id="@+id/topText" />
+
+
+		</LinearLayout>
+	
+
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="Enter Username..."
+		android:layout_marginTop="25dp"
+		android:id="@+id/EditText1" />
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="Enter Password..."
+		android:layout_marginTop="25dp"
+		android:id="@+id/EditText2" />
+	<Button
+		android:text="Login"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="45dp"
+		android:background="#578EF7"
+		android:textColor="#ffffff"
+		android:id="@+id/button1" />
+	<TextView
+		android:text=""
+		android:layout_marginTop="45dp"
+		android:textSize="11sp"
+		android:textColor="#960535"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/textView2" />
+
+    
+
+</LinearLayout>
