@@ -12,13 +12,25 @@ using TasksApp.Helper;
 
 namespace TasksApp
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar")]
+    [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat.Light")]
     class tasksClass: AppCompatActivity
     {
         EditText edtTask;
         DbHelper dbHelper;
         customAdapter adapter;
         ListView lstTask;
+
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+
+            SetContentView(Resource.Layout.tasks);
+            dbHelper = new DbHelper(this);
+            lstTask = FindViewById<ListView>(Resource.Id.stTask);
+
+            LoadTaskList();
+
+        }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
@@ -62,18 +74,6 @@ namespace TasksApp
             List<string> taskList = dbHelper.getTaskList();
             adapter = new customAdapter(this, taskList, dbHelper);
             lstTask.Adapter = adapter;
-        }
-
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-
-            SetContentView(Resource.Layout.tasks);
-            dbHelper = new DbHelper(this);
-            lstTask = FindViewById<ListView>(Resource.Id.stTask);
-
-            LoadTaskList();
-
         }
 
 

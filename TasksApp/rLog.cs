@@ -43,8 +43,7 @@ namespace TasksApp
 
                 var intent = new Intent(this, typeof(tasksClass));
 
-                intent.PutExtra("username", nameText.Text);
-                intent.PutExtra("password", passText.Text);
+               
                 StartActivity(intent);
             }
         }
